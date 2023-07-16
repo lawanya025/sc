@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Red Flag Questions</title>
+</head>
+<body>
+    <h1>Red Flag Questions</h1>
+    <h2>Selected Symptoms:</h2>
+    <p>{{ selected_symptoms }}</p>
+    <h2>Red Flag Questions:</h2>
+    <ul>
+        {% for questions in red_quest %}
+            <li>{{ questions }}</li>
+            {% if '-' in questions %}
+                <input type="text" name="responses" value="" required>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <form action="/opqrst" method="post">
+        <input type="submit" value="next">
+    </form>
+</body>
+</html>

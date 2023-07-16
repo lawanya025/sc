@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VINDICATE Questions</title>
+</head>
+<body>
+    <h1>VINDICATE Questions</h1>
+    <h2>Selected Symptoms:</h2>
+    <p>{{ selected_symptoms }}</p>
+    <h2>VINDICATE Questions:</h2>
+    <ul>
+        {% for questions in vind_quest %}
+            <li>{{ questions }}</li>
+            {% if '-' in questions %}
+                <input type="text" name="responses" value="" required>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

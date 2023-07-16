@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OPQRST Questions</title>
+</head>
+<body>
+    <h1>OPQRST Questions</h1>
+    <h2>Selected Symptoms:</h2>
+    <p>{{ selected_symptoms }}</p>
+    <h2>OPQRST Questions:</h2>
+    <ul>
+        {% for questions in interview_quest %}
+            <li>{{ questions }}</li>
+            {% if '-' in questions %}
+                <input type="text" name="responses" value="" required>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <form action="/vindicate" method="post">
+        <input type="submit" value="next">
+    </form>
+</body>
+</html>
