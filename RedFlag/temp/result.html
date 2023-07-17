@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-top: 10px;
+            color: #777;
+        }
+
+        .no-symptoms {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selected Symptoms</h1>
+    <ul>
+        {% for symptom in selected_symptoms %}
+            <li>{{ symptom }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Related Symptoms</h2>
+    {% if related_symptoms %}
+        <ul>
+            {% for symptom in related_symptoms %}
+                <li>{{ symptom }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-symptoms">No related symptoms found.</p>
+    {% endif %}
+</body>
+</html>
