@@ -1,0 +1,29 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+    <h2>{{ gettext('ACUTE BACKPAIN') }}</h2>
+
+    <button onclick="location.href='/acute_backpain';">{{ gettext('Learn More') }}</button>
+
+    <h2>{{ gettext('SUBACUTE BACKPAIN') }}</h2>
+
+    <button onclick="location.href='/subacute_backpain';">{{ gettext('Learn More') }}</button>
+
+    <h2>{{ gettext('CHRONIC BACKPAIN') }}</h2>
+
+    <button onclick="location.href='/chronic_backpain';">{{ gettext('Learn More') }}</button>
+
+    <h2>{{ gettext('UPPER BACKPAIN') }}</h2>
+
+    <button onclick="location.href='/upper_backpain';">{{ gettext('Learn More') }}</button>
+
+    <h2>{{ gettext('MIDDLE BACKPAIN') }}</h2>
+
+    <button onclick="location.href='/middle_backpain';">{{ gettext('Learn More') }}</button>
+
+    <h2>{{ gettext('LOWER BACKPAIN') }}</h2>
+
+    <button onclick="location.href='/lower_backpain';">{{ gettext('Learn More') }}</button>
+
+{% endblock %}
