@@ -1,0 +1,20 @@
+{% block content %}
+  <h2>Potential Diagnoses</h2>
+
+  <!-- Display the selected symptoms and generated response -->
+  <p>Generated Response: {{ generated_response }}</p>
+
+  <!-- Display the potential diagnoses -->
+  <h3>Potential Diagnoses:</h3>
+  <ul>
+    {% for diagnosis in potential_diagnoses %}
+      <li>{{ diagnosis }}</li>
+    {% endfor %}
+  </ul>
+
+  <!-- Add a button to navigate to the questions page -->
+  <form action="/more" method="get">
+    <button type="submit">Proceed to Questions</button>
+  </form>
+
+{% endblock %}
